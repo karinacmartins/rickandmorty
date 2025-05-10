@@ -44,7 +44,7 @@ function renderCharacters(characters) {
     characters.forEach(character => {
         const characterCard = `
             <div class="col-12 col-md-6 col-lg-4">
-                <div class="card shadow">
+                <div class="card shadow" onclick="viewCharacterDetail(${character.id})">
                     <img src="${character.image}" class="card-img-top" alt="Foto do Personagem ${character.name}">
                     <div class="card-body fw-bolder">
                         <h5 class="card-title">${character.name}</h5>
@@ -192,4 +192,30 @@ function renderPagination(prevPage, nextPage) {
 
 function viewCharacterDetail(characterId) {
   window.location.href = `detail.html?character=${characterId}`;
+}
+
+async function loadCharacterDetails() {
+  const characterId = getCharacterIdFromURL();
+
+  if (!characterId) {
+    console.error("ID do personagem não encontrado na URL.");
+    return;
+  }
+
+  try {
+    const response = await axios.get(`https://rickandmortyapi.com/api/character/${characterId}`);
+    const character = response.data;
+
+    renderCharacterDetails(character);
+  } catch (error) {
+    console.error("Erro ao carregar os detalhes do personagem:", error);
+    document.getElementById("character-detail").innerHTML = `
+      <p class="text-center text-danger">Erro ao carregar os detalhes do personagem.</p>
+    `;
+  }
+}
+
+function getCharacterIdFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("character");
 }
