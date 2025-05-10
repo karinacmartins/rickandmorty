@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", main);
 
 async function main() {
     loadMainContent(1);
-    updateFooterData(); // Substituído renderFooterData por updateFooterData
+    updateFooterData(); 
 }
 
 // Seleciona o campo de pesquisa e a lista de personagens
@@ -169,8 +169,8 @@ function renderPagination(prevPage, nextPage) {
   liPrevPage.appendChild(buttonPrev);
 
   // BTN Next
-  const liNextPage = document.createElement("li");
-  liPrevPage.classList.add("page-item");
+  const liNextPage = document.createElement("li"); 
+  liNextPage.classList.add("page-item");
 
   if (!nextPage) {
     liNextPage.classList.add("disabled");
@@ -185,8 +185,7 @@ function renderPagination(prevPage, nextPage) {
   liNextPage.appendChild(buttonNext);
 
   ul.appendChild(liPrevPage);
-  ul.appendChild(liNextPage);
-
+  ul.appendChild(liNextPage); 
   nav.appendChild(ul);
 }
 

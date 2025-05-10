@@ -37,7 +37,7 @@ function renderCharacterDetails(character) {
     const characterDetail = document.getElementById("character-detail");
 
     const characterCard = `
-        <div class="col-12">
+        <div class="col-12 col-lg-8 mx-auto">
             <div class="card shadow-lg border-0">
                 <div class="row g-0">
                     <div class="col-md-6">
@@ -49,12 +49,12 @@ function renderCharacterDetails(character) {
                             <p class="card-text">
                                 <small>
                                     <i class="bi bi-circle-fill ${character.status === 'Alive' ? 'text-success' : character.status === 'Dead' ? 'text-danger' : 'text-secondary'}"></i>
-                                    <span class="fw-bold">${character.status}</span> - ${character.species}
+                                    <span class="fw-bold">${character.status === "unknown" ? "Desconhecido" : character.status}</span> - ${character.species}
                                 </small>
                             </p>
                             <p class="card-text">
                                 <small class="text-secondary">Gênero:</small><br>
-                                <span>${character.gender}</span>
+                                <span>${character.gender === "unknown" ? "Desconhecido" : character.gender}</span>
                             </p>
                             <p class="card-text">
                                 <small class="text-secondary">Tipo:</small><br>
@@ -62,11 +62,11 @@ function renderCharacterDetails(character) {
                             </p>
                             <p class="card-text">
                                 <small class="text-secondary">Origem:</small><br>
-                                <span>${character.origin.name}</span>
+                                <span>${character.origin.name === "unknown" ? "Desconhecido" : character.origin.name}</span>
                             </p>
                             <p class="card-text">
                                 <small class="text-secondary">Última localização conhecida:</small><br>
-                                <span>${character.location.name}</span>
+                                <span>${character.location.name === "unknown" ? "Desconhecido" : character.location.name}</span>
                             </p>
                             <p class="card-text">
                                 <small class="text-secondary">Número de episódios:</small><br>

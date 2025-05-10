@@ -81,11 +81,34 @@ footer {
 }
 
 #character-detail .card {
-    max-width: 100%; /* Permite que o card ocupe toda a largura */
-    margin: 0 auto; /* Centraliza o card */
+    max-width: 100%; 
+    margin: 0 auto; 
 }
 
 #character-detail img {
-    object-fit: cover; /* Ajusta a imagem sem distorção */
-    height: 100%; /* Garante que a imagem ocupe toda a altura */
+    object-fit: cover; 
+    height: 100%;
+}
+
+/* Estilo para os botões de paginação */
+.pagination .page-item .page-link {
+    color: #62ab60; 
+    border: 1px solid #62ab60;
+    transition: all 0.3s ease; 
+}
+
+.pagination .page-item .page-link:hover {
+    background-color: #62ab60;
+    color: #fff; 
+    border-color: #62ab60; 
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #62ab60; 
+    color: #fff; 
+    border-color: #62ab60;
+}
+
+.pagination {
+    gap: 0.5rem;
 }
