@@ -1,7 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .main-title {
     color: #105718;
 }
 
+#circle-status {
+    font-size: 10px;
+    display: inline-block;
+    margin-right: 4px;
+}
+
+.copy {
+    margin-top: 128px;
+}
+
+footer {
+    background-color: #1f2821;
+    color: #4c9c4a;
+}
+
+.main-content {
+    background-color: #252525;
+    background-image: url(../images/FUNDO_2.jpg);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 500px;
+    padding-top: 40px;
+}
+
+.detail {
+    background-size: cover;
+}
+
+@media (max-width: 992px) {
+    .main-content {
+        padding-bottom: 250px;
+    }
+
+    .detail {
+        background-size: contain;
+    }
+}
+
+
+
+/* Sobrescrita Bootstrap */
 .form-control {
     border-right: none;
 }
@@ -18,11 +66,26 @@
 }
 
 .card-title {
-    font-size: 2rem;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 2px;
 }
 
-#circle-status {
-    font-size: 10px;
-    display: inline-block;
-    margin-right: 4px;
+.card {
+    max-width: 20rem;
+    margin: 0 auto;
+    background-color: transparent;
+    color: #ffff;
+    cursor: pointer;
+    --bs-card-border-color: green;
+}
+
+#character-detail .card {
+    max-width: 100%; /* Permite que o card ocupe toda a largura */
+    margin: 0 auto; /* Centraliza o card */
+}
+
+#character-detail img {
+    object-fit: cover; /* Ajusta a imagem sem distorção */
+    height: 100%; /* Garante que a imagem ocupe toda a altura */
 }

@@ -5,6 +5,7 @@
 
 Uma aplicação web para explorar os personagens do Rick and Morty.
 
+---
 
 ## 📚 Sobre o Projeto
 
@@ -14,21 +15,39 @@ A aplicação consome dados da [Rick and Morty API](https://rickandmortyapi.com/
 
 ### 🔍 Funcionalidades
 
-Para cada personagem, são exibidas as seguintes informações:
+- **Página Inicial**:
 
-- 🧪 **Imagem**
-- 🧬 **Nome**
-- 💀 **Status** (vivo, morto ou desconhecido), com ícone colorido indicativo
-- 👽 **Espécie**
-- 🌍 **Última localização conhecida**
-- 🎞️ **Episódio em que foi visto pela última vez**
+  - Exibe uma lista de personagens com as seguintes informações:
+    - 🧪 **Imagem**
+    - 🧬 **Nome**
+    - 💀 **Status** (vivo, morto ou desconhecido), com ícone colorido indicativo
+    - 👽 **Espécie**
+    - 🌍 **Última localização conhecida**
+  - Campo de **busca dinâmica**, permitindo filtrar personagens diretamente da API.
 
-Além disso, há um campo de **busca**, permitindo filtrar os personagens de forma dinâmica.
+- **Página de Detalhes**:
 
-O layout é totalmente responsivo, com uso de **Bootstrap** e componentes de cartão personalizados.
+  - Exibe informações detalhadas do personagem selecionado:
+    - 🧪 **Imagem em destaque**
+    - 🧬 **Nome**
+    - 💀 **Status**
+    - 👽 **Espécie**
+    - 🌍 **Última localização conhecida**
+    - 🌌 **Origem**
+    - 🎞️ **Número de episódios em que apareceu**
+    - 🧾 **Tipo** (se disponível)
 
+- **Footer Dinâmico**:
 
-## Tecnologias Utilizadas
+  - Exibe o total de personagens, localizações e episódios da API.
+  - Atualizado automaticamente com os dados da API.
+
+- **Responsividade**:
+  - Layout totalmente responsivo, adaptado para diferentes tamanhos de tela, utilizando **Bootstrap**.
+
+---
+
+## 🚀 Tecnologias Utilizadas
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
@@ -37,6 +56,25 @@ O layout é totalmente responsivo, com uso de **Bootstrap** e componentes de car
 ![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge&logo=axios&logoColor=white)
 ![Rick and Morty API](https://img.shields.io/badge/API-Rick_and_Morty-00BFFF?style=for-the-badge)
 
+---
+
+## 📂 Estrutura do Projeto
+
+```
+rickandmorty/
+├── [index.html]        # Página inicial
+├── [detail.html]       # Página de detalhes do personagem
+├── css/
+│   └── styles.css      # Estilos personalizados
+├── js/
+│   ├── index.js        # Lógica da página inicial
+│   ├── detail.js       # Lógica da página de detalhes
+│   ├── common.js       # Funções compartilhadas (ex.: footer dinâmico)
+│   └── api.js          # Configuração de requisições à API
+├── assets/
+│   └── images/         # Imagens e ícones
+└── [README.md]         # Documentação do projeto
+```
 
 <br>
 <br>
