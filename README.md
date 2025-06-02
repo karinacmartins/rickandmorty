@@ -3,6 +3,10 @@
   Rick and Morty 
 </h1>
 
+<p align="center">
+  <img src="./images/print.jpg" alt="Screenshot do site Rick and Morty" width="600"/>
+</p>
+
 Uma aplicação web para explorar os personagens do Rick and Morty.
 
 ---
